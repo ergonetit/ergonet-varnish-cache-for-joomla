@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.9" group="system" method="upgrade">
-	<name>varnishCache</name>
+	<name>Ergonet Varnish Cache</name>
 	<creationDate>01/09/2019</creationDate>
 	<author>Ergonet srl</author>
 	<authorEmail>info@ergonet.it</authorEmail>
