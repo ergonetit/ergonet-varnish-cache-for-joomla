@@ -12,13 +12,20 @@ defined('_JEXEC') or die;
 
 /**
  * Joomla plugin.
- *
- * @package   varnishCache
+ * @author Ergonet Srl
  * @since     1.0.0
  */
 
-class plgSystemVarnishCache extends JPlugin
+class plgSystemergonetvarnishcache extends JPlugin
 {
+    function __construct() {
+        if (JFactory::getUser()->guest) {
+            JResponse::setHeader('X-Logged-In', 'False', true);
+        } else {
+            JResponse::setHeader('X-Logged-In', 'True', true);
+        }
+    }
+
     function onContentAfterSave($context, $article, $isNew)
     {
         if (get_class($article) != "Joomla\CMS\Table\Content") {

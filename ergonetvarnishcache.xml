@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.9" group="system" method="upgrade">
+	<name>PLG_SYSTEM_ERGONETVARNISHCACHE</name>
+	<creationDate>01/09/2019</creationDate>
+	<author>Ergonet srl</author>
+	<authorEmail>info@ergonet.it</authorEmail>
+	<authorUrl>https://www.ergonet.it</authorUrl>
+	<copyright>Ergonet srl 2020</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.1</version>
+	<description>PLG_SYSTEM_ERGONETVARNISHCACHE_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="ergonetvarnishcache">ergonetvarnishcache.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+</extension>
