@@ -18,12 +18,14 @@ defined('_JEXEC') or die;
 
 class plgSystemergonetvarnishcache extends JPlugin
 {
-    function __construct() {
+    public function __construct(&$subject, $config = array())
+    {
         if (JFactory::getUser()->guest) {
             JResponse::setHeader('X-Logged-In', 'False', true);
         } else {
             JResponse::setHeader('X-Logged-In', 'True', true);
         }
+        parent::__construct($subject);
     }
 
     function onContentAfterSave($context, $article, $isNew)
