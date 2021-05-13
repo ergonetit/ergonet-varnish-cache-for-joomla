@@ -64,11 +64,13 @@ class plgSystemergonetvarnishcache extends JPlugin
     function onUserAfterLogin($options)
     {
         $app    = JApplication::getInstance('site');
-        $lifetime = $this->params->get('cookie_lifetime', 60) * 24 * 60 * 60;
+        $plg = JPluginHelper::getPlugin('system', 'plgSystemergonetvarnishcache');
+        $plg_params = new JRegistry();
+        $plg_params->loadString($plg->params);
+        $cookie = $plg_params->get('cookie_lifetime', 60);
+        $lifetime = $cookie* 24 * 60 * 60;
         $token    = JUserHelper::genRandomPassword(16);
-
         setcookie("joomla_logged_in", $token, time()+$lifetime);
-
         return true;
     }
 
